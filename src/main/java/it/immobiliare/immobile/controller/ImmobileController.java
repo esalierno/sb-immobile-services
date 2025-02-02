@@ -30,6 +30,17 @@ public class ImmobileController {
         return new ResponseEntity<>(immobileList, HttpStatus.OK);
     }
 
+    @PostMapping("/immobili")
+    public ResponseEntity<ImmobileDTO> saveImmobile(@RequestBody ImmobileDTO immobileDTO) {
+
+        log.debug("Creazione nuovo immobile con gli attributi:");
+        log.debug("=> ShortDescription: {}", immobileDTO.getShortDescription());
+        log.debug("=> Description: {}", immobileDTO.getDescription());
+        log.debug("=> City: {}", immobileDTO.getCity());
+
+        return new ResponseEntity<>(immobileDTO, HttpStatus.CREATED);
+    }
+
     @GetMapping("/immobili/{immobileId}")
     public ResponseEntity<List<ImmobileDTO>> getImmobile( @PathVariable Long immobileId) {
 
