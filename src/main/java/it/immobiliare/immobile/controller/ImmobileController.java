@@ -23,7 +23,7 @@ public class ImmobileController {
     @GetMapping("/immobili")
     public ResponseEntity<List<ImmobileDTO>> getImmobili() {
 
-        List<ImmobileDTO> immobileList = new ArrayList<ImmobileDTO>();
+        List<ImmobileDTO> immobileList = new ArrayList<>();
         //ImmobileDTO immobile = new ImmobileDTO();
         //immobileList.add(immobile);
 
@@ -34,7 +34,7 @@ public class ImmobileController {
     public ResponseEntity<List<ImmobileDTO>> getImmobile( @PathVariable Long immobileId) {
 
         log.debug("Recuperato immobile con immobileId: {}", immobileId);
-        List<ImmobileDTO> immobileList = new ArrayList<ImmobileDTO>();
+        List<ImmobileDTO> immobileList = new ArrayList<>();
         ImmobileDTO immobile = new ImmobileDTO();
         immobileList.add(immobile);
 
