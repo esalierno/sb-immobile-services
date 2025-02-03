@@ -2,14 +2,12 @@ package it.immobiliare.immobile.controller;
 
 import it.immobiliare.immobile.dto.ImmobileDTO;
 import it.immobiliare.immobile.service.ImmobileService;
-import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
